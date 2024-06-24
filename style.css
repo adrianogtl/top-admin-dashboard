@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #22c55e;
+  --accent-color: #1d4ed8;
+  --gray: #e5e7eb;
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(280px, 20%) 80%;
+}
+
+p {
+  color: var(--black);
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.rounded {
+  border-radius: 32px;
+  border-style: solid;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* Sidebar section */
+
+.sidebar {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: grid;
+  font-weight: 600;
+  grid-template-rows: 10% 40% 50%;
+  place-items: flex-start;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo svg {
+  height: 50px;
+  width: 50px;
+  fill: var(--white);
+  margin-right: 0.5rem;
+}
+
+.nav {
+  font-size: 1.3rem;
+  list-style-type: none;
+}
+
+.nav li {
+  margin-bottom: 1.5rem;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+}
+
+.nav li svg {
+  margin: 0 0.5rem;
+  fill: var(--white);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+/* Header section */
+
+.header {
+  background-color: var(--white);
+  display: grid;
+  padding: 1rem;
+  font-weight: 600;
+  grid-template-rows: 50% 50%;
+  gap: 1rem;
+  z-index: 9;
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search input {
+  width: 40vw;
+  padding: 0.4rem 1rem;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  background-color: var(--gray);
+}
+
+.search input:active {
+  outline-color: var(--accent-color);
+}
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  margin: 0 1rem;
+  border-radius: 25px;
+}
+
+.header-bottom {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greeting {
+  flex: 0 0 460px;
+  display: flex;
+  align-items: center;
+}
+
+.greeting img {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+.actions {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.action {
+  width: 125px;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--white);
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.action:hover {
+  cursor: pointer;
+}
+
+/* Content section */
+
+.content {
+  background-color: var(--gray);
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.projects-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+.card {
+  min-width: 300px;
+  max-width: 500px;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1rem;
+  border-left: 10px solid var(--accent-color);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.card .icon {
+  margin-right: 1.5rem;
+}
+
+.card-icons {
+  float: right;
+}
+
+.aside {
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.annoucements {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.inner-box span {
+  font-size: 0.8rem;
+}
+
+.inner-box {
+  margin: 1rem 0rem;
+}
+
+.trending {
+  margin-top: 1rem;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.user {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.user:hover {
+  cursor: pointer;
+}
+
+.text {
+  margin-left: 1rem;
+}
+
+.text p {
+  font-size: 1rem;
+}
+
+
+@media only screen and (max-width: 1750px) {
+  .projects-container {
+    grid-template-columns: 100%;
+  }
+}
