@@ -8,12 +8,14 @@
   --primary-color: #22c55e;
   --accent-color: #204bc0;
   --bg-color: lightgray;
+  --dark: #585858;
 }
 
 body {
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 svg {
@@ -69,9 +71,6 @@ button {
 .navbar {
   grid-area: navbar;
   padding: 1rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
 
   color: #fff;
   font-weight: 600;
@@ -133,6 +132,10 @@ button {
   align-items: center;
   justify-content: flex-end;
 
+  p {
+    margin-left: 1rem;
+  }
+
   img {
     margin-left: 1rem;
   }
@@ -173,7 +176,7 @@ button {
 .main {
   grid-area: main;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3.1fr 0.8fr;
   gap: 1rem;
   grid-template-areas: "card-container aside-container";
   padding: 1rem;
@@ -183,7 +186,8 @@ button {
   grid-area: card-container;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, auto-fit);
+  gap: 16px;
 }
 
 .card {
@@ -194,18 +198,19 @@ button {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
 
   h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   p {
+    padding-bottom: 0.5rem;
+    line-height: 1.2;
     font-size: 1rem;
-    padding-bottom: 2rem;
+    text-indent: 1rem;
   }
 
   .icons {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
 
     svg {
       margin-right: 1rem;
@@ -221,7 +226,42 @@ button {
 }
 
 .aside {
-  background-color: yellow;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+
+  h4 {
+    font-size: 1.4;
+  }
+
+  span,
+  hr {
+    color: var(--dark);
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+
+  img {
+    width: 6rem;
+    margin-right: 1rem;
+  }
+
+  .follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -255,5 +295,12 @@ button {
       "navbar"
       "header"
       "main";
+  }
+
+  .card-container {
+    grid-area: card-container;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
